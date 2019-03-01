@@ -10,6 +10,29 @@ namespace Program3
     {
         static void Main(string[] args)
         {
+            int[] arreglo = new int[10];
+            Random r = new Random();
+
+
+            for (int i = 0; i < 10; i++)
+            {
+
+                arreglo[i] = r.Next(10, 101);
+                Console.WriteLine(arreglo[i]);
+
+            }
+
+
+            int mayor = 0;
+
+            foreach (var item in arreglo)
+            
+                if (item > mayor)
+                    mayor = item;
+
+            Console.WriteLine("El mayor es de: {0}",mayor);
+
+            Console.ReadLine();
         }
     }
 }
